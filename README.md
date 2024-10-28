@@ -47,7 +47,7 @@ graph TD
 
 ```hcl
 module "snowflake_network_policies" {
-  source = "git::https://github.com/Richard-Barrett/terraform-snowflake-network-policies.git?ref=0.0.1"
+  source = "git::https://github.com/Richard-Barrett/terraform-snowflake-network-policies.git?ref=0.2.0"
 
   network_policy_name            = "example_policy"
   allowed_network_rule_list      = ["rule1", "rule2"]

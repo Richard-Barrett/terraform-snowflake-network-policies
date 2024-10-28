@@ -8,6 +8,7 @@ terraform {
   }
 }
 
+# tflint-ignore: terraform_unused_declarations
 resource "snowflake_network_policy" "this" {
   count = var.create_network_policy ? 1 : 0
 
