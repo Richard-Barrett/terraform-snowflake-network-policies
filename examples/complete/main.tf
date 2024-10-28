@@ -10,6 +10,7 @@ terraform {
 
 provider "snowflake" {}
 
+# tflint-ignore: terraform_unused_declarations
 module "snowflake_network_policy_test" {
   source = "../../"
 

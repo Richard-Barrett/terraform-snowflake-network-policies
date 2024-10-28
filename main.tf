@@ -20,6 +20,7 @@ resource "snowflake_network_policy" "this" {
   comment                   = var.comment
 }
 
+# tflint-ignore: terraform_unused_declarations
 resource "snowflake_network_policy_attachment" "this" {
   count = var.create_network_policy_attachment ? 1 : 0
 
