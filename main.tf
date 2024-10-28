@@ -22,7 +22,7 @@ resource "snowflake_network_policy" "this" {
 resource "snowflake_network_policy_attachment" "this" {
   count = var.create_network_policy_attachment ? 1 : 0
 
-  network_policy_name = resource.snowflake_network_policy.this.name
+  network_policy_name = snowflake_network_policy.this[count.index].name
   set_for_account     = var.set_for_account
   users               = var.users
 }
