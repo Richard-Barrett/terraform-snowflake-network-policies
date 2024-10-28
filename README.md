@@ -1,5 +1,11 @@
 # Terraform Snowflake Network Policies Module
 
+
+[![CodeQL IaC](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/iac-codeql.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/iac-codeql.yaml)
+[![Terraform Validate](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/terraform_validate.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/terraform_validate.yaml)
+[![TFLint](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/tflint.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/tflint.yaml)
+[![Trivy Scan](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/trivy.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/trivy.yaml)
+
 This Terraform module manages Snowflake network policies and their attachments.
 
 <details>
@@ -47,7 +53,7 @@ graph TD
 
 ```hcl
 module "snowflake_network_policies" {
-  source = "git::https://github.com/Richard-Barrett/terraform-snowflake-network-policies.git?ref=0.5.0"
+  source = "git::https://github.com/Richard-Barrett/terraform-snowflake-network-policies.git?ref=0.10.0"
 
   network_policy_name            = "example_policy"
   allowed_network_rule_list      = ["rule1", "rule2"]
