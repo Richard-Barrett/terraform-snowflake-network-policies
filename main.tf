@@ -11,7 +11,7 @@ terraform {
 resource "snowflake_network_policy" "this" {
   count = var.create_network_policy ? 1 : 0
 
-  name                      = "$upper(var.network_policy_name)}_NTWK_POLICY"
+  name                      = "${upper(var.network_policy_name)}_NTWK_POLICY"
   allowed_network_rule_list = var.allowed_network_rule_list
   blocked_network_rule_list = var.blocked_network_rule_list
   allowed_ip_list           = var.allowed_ip_list
