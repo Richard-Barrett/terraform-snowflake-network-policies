@@ -8,7 +8,6 @@ terraform {
   }
 }
 
-# tflint-ignore: terraform_unused_declarations
 resource "snowflake_network_policy" "this" {
   count = var.create_network_policy ? 1 : 0
 
@@ -16,15 +15,14 @@ resource "snowflake_network_policy" "this" {
   allowed_network_rule_list = var.allowed_network_rule_list
   blocked_network_rule_list = var.blocked_network_rule_list
   allowed_ip_list           = var.allowed_ip_list
-  blocked_ip_list           = va.blocked_ip_list
+  blocked_ip_list           = var.blocked_ip_list
   comment                   = var.comment
 }
 
-# tflint-ignore: terraform_unused_declarations
 resource "snowflake_network_policy_attachment" "this" {
   count = var.create_network_policy_attachment ? 1 : 0
 
-  network_policy_name = data.snowflake_network_policy.this.network_policy_name
+  network_policy_name = data.snowflake_network_policy.this.name
   set_for_account     = var.set_for_account
   users               = var.users
 }
