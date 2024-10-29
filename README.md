@@ -1,5 +1,6 @@
-# Terraform Snowflake Network Policies Module
+<img align="right" width="60" height="60" src="images/terraform.png">
 
+# Terraform Snowflake Network Policies Module
 
 [![CodeQL IaC](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/iac-codeql.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/iac-codeql.yaml)
 [![Terraform Validate](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/terraform_validate.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-snowflake-network-policies/actions/workflows/terraform_validate.yaml)
